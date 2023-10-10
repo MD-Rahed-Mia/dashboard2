@@ -1,0 +1,422 @@
+/* --------- sidebar css here -----------*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,800&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+
+:root {
+  --text_color: #2f3640;
+  --background_primary: whitesmoke;
+}
+
+.overflow {
+  position: static;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  display: none;
+}
+
+/* navbar starts from here  */
+
+.navbar {
+  width: 300px;
+  background: var(--background_primary);
+  padding: 0.5rem;
+  min-height: 100vh;
+  overflow-y: auto;
+}
+
+.project_nav {
+  padding: 1rem;
+}
+
+.project_nav ul li {
+  list-style-type: none;
+  padding: 10px 1rem;
+}
+
+.project_nav ul li a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: var(--text_color);
+  font-weight: 500;
+}
+
+.project_nav ul li i {
+  padding: 0 10px;
+}
+
+/* right container starts here  */
+
+.right_container {
+  width: 85%;
+  overflow-y: auto;
+  background: white;
+}
+
+.right_container::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  display: none;
+}
+
+.search_bar {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 0.5px solid lightgray;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  left: 0;
+  background: white;
+}
+
+.search_box {
+  position: sticky;
+  top: 0;
+  left: 0;
+  padding: 4px 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+}
+
+.search_box > i {
+  font-size: 1.3rem;
+  opacity: 0.5;
+}
+
+#search_input {
+  width: 700px;
+  padding: 8px 10px;
+  border: none;
+  background: white;
+}
+
+.user_img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.search_bar_right {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.search_bar_right .mode,
+.noti {
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.admin {
+  width: 200px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.admin>div {
+  display: flex;
+  flex-direction: column;
+}
+
+.admin>div span:nth-child(2) {
+  font-weight: bold;
+}
+
+/* notification box here  */
+
+.notification {
+  position: relative;
+}
+
+.notificaton_box {
+  position: absolute;
+  top: 3.2rem;
+  right: 0;
+  background: white;
+  width: 400px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+  border-radius: 6px;
+  transform: scale(0);
+  transition: all 500ms;
+}
+
+.active {
+  transform: scale(1);
+}
+
+.noti_head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid lightblue;
+}
+
+.noti_head>p {
+  font-size: 1.2rem;
+  font-weight: 600;
+  opacity: 0.7;
+  color: lightslategray;
+}
+
+/* .notification message here  */
+
+.notification_messages {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  overflow-y: auto;
+}
+
+.noti_message {
+  padding: 1rem;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  gap: 1rem;
+  border-bottom: 1px solid lightblue;
+}
+
+.noti_message>img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+/* view all button  */
+
+.all_noti_btn {
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  cursor: pointer;
+}
+
+/* --------- products search here -----------*/
+
+
+.product_search input {
+  width: 50%;
+  padding: 0.5rem 1rem;
+}
+
+/* --------- product tabtle starts here -----------*/
+
+
+.product_table {
+  padding: 1rem;
+  width: 100%;
+}
+
+.product_cont {
+  display: block;
+}
+
+.product_table table {
+  width: 100%;
+  margin-top: 1rem;
+  border-collapse: collapse;
+  text-align: center;
+  font-size: 1rem;
+  border: 1px solid gray;
+}
+
+.product_table table thead tr {
+  font-weight: bold;
+}
+
+.product_table tr,
+td {
+  height: 60px;
+  border-bottom: 1px solid gray;
+}
+
+.product_table tr td img {
+  width: 40px;
+  height: 40px;
+}
+
+.product_table tr td:last-child button {
+  background: none;
+  padding: 5px 1rem;
+  font-size: 1.2rem;
+  border: none;
+  cursor: pointer;
+}
+
+/* --------- product edit here -----------*/
+
+.product_edit_container {
+  display: none;
+}
+
+.product_edit {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  position: relative;
+}
+
+.product_edit_left form {
+  width: 100%;
+}
+
+.basic_info {
+  width: 100%;
+}
+
+.basic_info label {
+  display: block;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.basic_info input {
+  padding: 10px;
+  width: 100%;
+  margin: 5px 0px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+}
+
+.p_dn {
+  width: 100%;
+}
+
+.p_description {
+  padding: 1rem;
+  width: 100%;
+  height: 180px;
+  resize: none;
+  border: none;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+}
+
+/* --------- pricing edit sectionb -----------*/
+
+.p_form {
+  margin-top: 2rem;
+}
+
+.pr_desk_box {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 47% 47%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pr_desk_box div label {
+  width: 100%;
+  display: block;
+}
+
+.pr_desk_box div input {
+  padding: 10px;
+  width: 100%;
+  margin: 5px 0px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+}
+
+/* --------- products orginazation here -----------*/
+
+.p_org {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 47% 47%;
+  gap: 2rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.p_org label {
+  width: 100%;
+  display: block;
+}
+
+.p_org input {
+  padding: 10px;
+  width: 100%;
+  margin: 5px 0px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+}
+
+.p_org select {
+  padding: 10px;
+  width: 100%;
+  margin: 5px 0px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+}
+
+/* --------- product edit footer -----------*/
+
+.p_edit_footer {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  background: white;
+  width: 100%;
+  height: 100px;
+  padding: 1rem 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.p_edit_footer button {
+  padding: 10px 1.5rem;
+  border: none;
+  background: whitesmoke;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.p_edit_del {
+  color: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.p_edit_save {
+  background: green !important;
+  margin-left: 1rem;
+  color: white;
+}
