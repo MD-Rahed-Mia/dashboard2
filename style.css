@@ -34,8 +34,12 @@ body {
 }
 
 .project_nav ul li {
+  width: 160px;
   list-style-type: none;
   padding: 10px 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 .project_nav ul li a {
@@ -45,14 +49,16 @@ body {
   font-weight: 500;
 }
 
-.project_nav ul li i {
-  padding: 0 10px;
+.project_nav ul li img {
+  height: 2rem;
+  width: 2rem;
 }
+
 
 /* right container starts here  */
 
 .right_container {
-  padding: 0 2rem;
+  padding: 1rem 2rem;
   width: 85%;
   overflow-y: auto;
 }
