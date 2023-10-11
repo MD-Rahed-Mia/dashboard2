@@ -218,93 +218,60 @@ body {
   cursor: pointer;
 }
 
-/* --------- order list item here -----------*/
-
-.order_list {
-  width: 900px;
-  background: #fff;
-  margin: 2rem 1rem;
-  border-radius: 7px;
-}
-
-.order_list_head {
-  width: 100%;
-  padding: 0.5rem 1.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
-}
-
-.order_list_head P {
-  font-size: 1.3rem;
-  font-weight: bold;
-  color: lightslategray;
-}
-
-.order_list_head button {
-  padding: 7px 1rem;
-  font-size: 1rem;
-  cursor: pointer;
-}
-
-/* --------- order item here -----------*/
 
 .order_item {
-  height: 500px;
-  overflow-y: auto;
-  padding: 10px 0;
+  width: 100%;
+  padding: 1rem;
 }
 
-.order_item::-webkit-scrollbar {
-  display: none;
+/* --------- order table data here -----------*/
+
+.order_table {
+  width: 100%;
+  padding: 2rem;
 }
 
-.order_item table {
+.order_table table {
   width: 100%;
   border-collapse: collapse;
   text-align: center;
-  border-radius: 7px;
 }
 
-.order_item table tr,
+.order_table tr,
 td {
   height: 50px;
-  border: 1px solid lightslategray;
   font-size: 0.8rem;
-  text-transform: capitalize;
-  color: #6b7280;
-}
-
-.order_item table thead {
-  background: whitesmoke;
-  width: 100%;
-  font-weight: bold;
-}
-
-.order_item table tr:hover {
-  background: whitesmoke;
+  font-weight: 500;
+  color: gray;
   cursor: pointer;
 }
 
-.order_item table tr td:first-child {
-  font-weight: bold;
+.order_table tr:hover {
+  background: rgba(173, 216, 230, 0.259);
 }
 
-.order_item table tr td:nth-child(2) span {
-  color: #44bd32;
-  font-weight: bold;
+.order_table table thead {
+  background: rgba(173, 216, 230, 0.259);
+  color: white !important;
+}
+
+td:first-child {
+  width: 100px;
+}
+
+.order_table table td.order_status {
+  color: #0fbcf9;
   position: relative;
 }
 
-.order_item table tr td:nth-child(2) span::before {
+.order_table table td.order_status::before {
   content: '';
   position: absolute;
   top: 50%;
-  left: -10px;
+  left: 2rem;
   transform: translateY(-50%);
-  width: 8px;
-  height: 8px;
-  background: #44bd32;
+  width: 13px;
+  height: 13px;
+  background: #0fbcf9;
   border-radius: 50%;
 }
