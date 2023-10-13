@@ -34,129 +34,67 @@
 
     <h2 class="ov_t">Products</h2>
 
-
-
-    <div class="product_edit_container">
-      <div class="product_edit">
-
-        <div class="product_edit_left">
-          <h3>Basic information</h3>
-          <p>Section to config basic product information</p>
-
-          <form class="basic_info">
-            <label for="p_name">Product name</label>
-            <input type="text" placeholder="product name">
-            <label for="p_category">product category</label>
-            <input type="text" placeholder="product category">
-            <label for="p_code">Product code</label>
-            <input type="text" placeholder="product code">
-
-            <div class="p_dn">
-              <label for="p_desc">Product description</label>
-              <textarea name="p_description"
-                class="p_description">product description here Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, neque. Debitis animi recusandae omnis quos odit aperiam facere minima laudantium sapiente, qui et inventore dolorum! Explicabo eius, cupiditate quia at consectetur nostrum deleniti, cum voluptate, tempora sequi officiis quisquam libero eos? Minima dicta, dolor corrupti vel voluptatum magnam id rem.</textarea>
-            </div>
-          </form>
-
-          <form class="p_form">
-            <h3>Pricing</h3>
-            <p>Section to config product sales information</p>
-            <div class="pr_desk_box">
-              <div>
-                <label for="Price">price</label>
-                <input type="number" placeholder="price">
-              </div>
-              <div>
-                <label for="sku">SKU</label>
-                <input type="number" placeholder="sku">
-              </div>
-              <div>
-                <label for="bulk_disc">Bulk discount</label>
-                <input type="text" placeholder="bulk discount">
-              </div>
-              <div>
-                <label for="t_rate">Tax rate(5%)</label>
-                <input type="text" placeholder="5%">
-              </div>
-            </div>
-          </form>
-          <br>
-          <h3>Organization</h3>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
-
-          <div class="p_org">
-            <div>
-              <label for="bname">Brand</label>
-              <input type="text" name="bname" placeholder="brand name">
-            </div>
-            <div>
-              <label for="tag">Tag name</label>
-              <input type="text" placeholder="tag name">
-            </div>
-            <div>
-              <label for="vendor">Vendor name</label>
-              <input type="text" name="vendor" placeholder="vendor name">
-            </div>
-            <div>
-              <label for="category">Category</label>
-              <select name="category" id="">
-                <option value="device">Device</option>
-                <option value="Accesories">Accesories</option>
-                <option value="mens cloth">men's</option>
-                <option value="ladies">ladies</option>
-                <option value="others">others</option>
-              </select>
-            </div>
-          </div>
-        </div>
-        <div class="product_edit_right">
-
-        </div>
-
-      </div>
-      <div class="p_edit_footer">
-        <div>
-          <button class="p_edit_del">
-            <i class="fa-solid fa-trash"></i>delete
-          </button>
-        </div>
-        <div>
-          <button class="p_discard">discard</button>
-          <button class="p_edit_save">
-            <i class="fa-solid fa-floppy-disk"></i>
-            save
-          </button>
-        </div>
-      </div>
-
+    <!-- add product button  -->
+    <div class="add_p_btn">
+      <button><i class="fas fa-plus"></i> add new product</button>
     </div>
 
-    <!-- edit order list here -->
+    <div class="new_p_container">
+      <div class="product_details">
+        <h3 class="ed_head">Products edit <i class="fas fa-question"></i></h3>
+
+      <p class="b2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis cumque velit architecto,<br> mollitia veritatis laudantium numquam quasi rem earum quaerat ducimus ratione doloribus tempore molestiae.</p>
+
+      <div class="pr_name_c">
+        <label for="pr_name">Product name</label>
+        <input type="text" placeholder="Nike air zordan" class="pr_name">
+        <span>Do not exceded name over 20 characters</span>
+      </div>
+
+      <div class="pe_category">
     
-  </div>
+          
+        <label for="category">Category</label>
+        <select name="category" id="category">
+          <option value="select">select category</option>
+          <option value="male">male</option>
+          <option value="female">female</option>
+          <option value="kids">kids</option>
+          <option value="digital content">digital content</option>
+        </select>
+      </div>
+      <div class="pe_brand">
+    
+          
+        <label for="category">Brand</label>
+        <input type="text" name="fBrand" id="PBrand" placeholder="brand name">
+      </div>
 
-  <script>
+      <div class="pe_desc">
+        <label for="pe_desc">product description</label>
+        <textarea name="" id="" placeholder="product description"></textarea>
+        <span>product description should not exceded 300 characters.</span>
+      </div>
 
-    // product edit code here 
+      </div>
 
-    const pEditBtn = document.querySelectorAll(".product_table table .fa-pencil");
-    const discardBtn = document.querySelector(".p_discard");
+      <div class="product_image">
 
-    pEditBtn.forEach((elemet, index) => {
-      elemet.addEventListener("click", () => {
-        document.querySelector(".product_edit_container").style.display = "block";
-        document.querySelector(".product_cont").style.display = "none";
-      });
-    })
+        <h3>Product images</h3>
 
-    discardBtn.addEventListener("click", () => {
+        <div class="pr_img">
+          <div></div>
+          <div></div>
+          <div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
 
-      document.querySelector(".product_edit_container").style.display = "none";
-      document.querySelector(".product_cont").style.display = "block";
-    })
+      </div>
+    </div>
 
-    console.log(pEditBtn);
-  </script>
+
 
   <script src="main.js"></script>
 </body>
