@@ -14,6 +14,11 @@ body {
   height: 100vh;
 }
 
+.dark {
+  background: #333;
+  color: white !important;
+}
+
 :root {
   --text_color: #2f3640;
   --background_primary: whitesmoke;
@@ -23,7 +28,6 @@ body {
 
 .navbar {
   width: 300px;
-  background: var(--background_primary);
   padding: 0.5rem;
   min-height: 100vh;
   overflow-y: auto;
@@ -45,7 +49,6 @@ body {
 .project_nav ul li a {
   text-decoration: none;
   font-size: 1.2rem;
-  color: var(--text_color);
   font-weight: 500;
 }
 
@@ -72,6 +75,9 @@ body {
 .ov_t {
   color: gray;
 }
+
+
+/* dark mode here  */
 
 
 /* --------------topbar here ----------------- */
@@ -118,7 +124,7 @@ body {
   gap: 2rem;
 }
 
-.topbar__notification img{
+.topbar__notification img {
   width: 30px;
   height: 30px;
   gap: 3rem;

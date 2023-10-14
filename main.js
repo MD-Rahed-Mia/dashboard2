@@ -2,6 +2,7 @@
 const addProduct = document.querySelector(".add_p_btn button");
 const productContainer = document.querySelector(".new_p_container");
 const productCards = document.querySelector(".product_cards");
+let themeBtn = document.querySelector(".top_bar__theme_icon");
 
 function addProductDiv() {
   if (productContainer.classList.contains("active")) {
