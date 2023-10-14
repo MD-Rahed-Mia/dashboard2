@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
 
 * {
@@ -59,7 +58,7 @@ body {
 /* right container starts here  */
 
 .right_container {
-  padding: 1rem 2rem;
+  padding: 0 2rem;
   width: 85%;
   overflow-y: auto;
 }
@@ -72,6 +71,59 @@ body {
 
 .ov_t {
   color: gray;
+}
+
+
+/* --------------topbar here ----------------- */
+
+.top_bar {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  left: 0;
+  background: white;
+}
+
+.topbar__search {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.4rem 1rem;
+  background: whitesmoke;
+  border-radius: 50px;
+  width: 550px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+}
+
+.topbar__search input {
+  font-size: 1rem;
+  height: 100%;
+  width: 90%;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+.topbar__search img {
+  height: 30px;
+  width: 30px;
+  margin-left: 1rem;
+}
+
+.topbar__notification {
+  display: flex;
+  gap: 2rem;
+}
+
+.topbar__notification img{
+  width: 30px;
+  height: 30px;
+  gap: 3rem;
+  display: inline-block;
+  cursor: pointer;
 }
 
 /* --------- dashboard cards goes here -----------*/
@@ -136,6 +188,7 @@ body {
 .our_tools__heading {
   color: gray;
 }
+
 .our_tools {
   margin-top: 2rem;
 }
@@ -146,8 +199,9 @@ body {
   flex-wrap: wrap;
   align-items: center;
 }
+
 .our_tools__card {
-  text-align:center;
+  text-align: center;
   width: 300px;
   min-height: 350px;
   padding: 1rem;
@@ -156,12 +210,14 @@ body {
   position: relative;
   user-select: none;
 }
-.our_tools__card >i {
+
+.our_tools__card>i {
   font-size: 4rem;
   display: block;
   padding: 1rem;
   color: #2980b9;
 }
+
 .ot_card__title {
   font-size: 2rem;
   color: #2980b9;
@@ -172,7 +228,8 @@ body {
 .ot_card__list {
   margin-top: 1rem;
 }
-.ot_card__list li{
+
+.ot_card__list li {
   list-style-type: none;
   font-size: 1rem;
   text-align: left;
@@ -193,6 +250,7 @@ body {
   margin-top: 1rem;
   font-weight: bold;
 }
+
 .ot_card__button {
   padding: 0.8rem 1rem;
   width: 100%;
