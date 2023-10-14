@@ -34,6 +34,31 @@
 
     <h2 class="ov_t">Products</h2>
 
+    <div class="product_cards">
+      <div class="pr_card">
+
+        <img src="images/keyboard.png" alt="">
+        <p class="pr_card__category">category</p>
+        <p class="pr_card__title">Lenovo Clock 2 Lenovo Clock 2 Smart Display with Google Assistant</p>
+        <p class="pr_card__price">&#2547; 1230</p>
+        <button class="pr_card__link"><a href="#">click to copy link</a></button>
+      </div><div class="pr_card">
+
+        <img src="images/keyboard2.png" alt="">
+        <p class="pr_card__category">category</p>
+        <p class="pr_card__title">Lenovo Clock 2 Lenovo Clock 2 Smart Display with Google Assistant</p>
+        <p class="pr_card__price">&#2547; 1230</p>
+        <button class="pr_card__link"><a href="#">click to copy link</a></button>
+      </div><div class="pr_card">
+
+        <img src="images/keyboard3.png" alt="">
+        <p class="pr_card__category">category</p>
+        <p class="pr_card__title">Lenovo Clock 2 Lenovo Clock 2 Smart Display with Google Assistant</p>
+        <p class="pr_card__price">&#2547; 1230</p>
+        <button class="pr_card__link"><a href="#">click to copy link</a></button>
+      </div>
+    </div>
+
     <!-- add product button  -->
     <div class="add_p_btn">
       <button><i class="fas fa-plus"></i> add new product</button>
@@ -43,38 +68,39 @@
       <div class="product_details">
         <h3 class="ed_head">Products edit <i class="fas fa-question"></i></h3>
 
-      <p class="b2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis cumque velit architecto,<br> mollitia veritatis laudantium numquam quasi rem earum quaerat ducimus ratione doloribus tempore molestiae.</p>
+        <p class="b2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis cumque velit architecto,<br>
+          mollitia veritatis laudantium numquam quasi rem earum quaerat ducimus ratione doloribus tempore molestiae.</p>
 
-      <div class="pr_name_c">
-        <label for="pr_name">Product name</label>
-        <input type="text" placeholder="Nike air zordan" class="pr_name">
-        <span>Do not exceded name over 20 characters</span>
-      </div>
+        <div class="pr_name_c">
+          <label for="pr_name">Product name</label>
+          <input type="text" placeholder="Nike air zordan" class="pr_name">
+          <span>Do not exceded name over 20 characters</span>
+        </div>
 
-      <div class="pe_category">
-    
-          
-        <label for="category">Category</label>
-        <select name="category" id="category">
-          <option value="select">select category</option>
-          <option value="male">male</option>
-          <option value="female">female</option>
-          <option value="kids">kids</option>
-          <option value="digital content">digital content</option>
-        </select>
-      </div>
-      <div class="pe_brand">
-    
-          
-        <label for="category">Brand</label>
-        <input type="text" name="fBrand" id="PBrand" placeholder="brand name">
-      </div>
+        <div class="pe_category">
 
-      <div class="pe_desc">
-        <label for="pe_desc">product description</label>
-        <textarea name="" id="" placeholder="product description"></textarea>
-        <span>product description should not exceded 300 characters.</span>
-      </div>
+
+          <label for="category">Category</label>
+          <select name="category" id="category">
+            <option value="select">select category</option>
+            <option value="male">male</option>
+            <option value="female">female</option>
+            <option value="kids">kids</option>
+            <option value="digital content">digital content</option>
+          </select>
+        </div>
+        <div class="pe_brand">
+
+
+          <label for="category">Brand</label>
+          <input type="text" name="fBrand" id="PBrand" placeholder="brand name">
+        </div>
+
+        <div class="pe_desc">
+          <label for="pe_desc">product description</label>
+          <textarea name="" id="" placeholder="product description"></textarea>
+          <span>product description should not exceded 300 characters.</span>
+        </div>
 
       </div>
 
@@ -83,20 +109,71 @@
         <h3>Product images</h3>
 
         <div class="pr_img">
-          <div></div>
-          <div></div>
           <div>
-            <div></div>
-            <div></div>
+            <input type="file" name="pr_img" id="file" accept=".png, .img">
+            <label for="file" class="file_d"> <i class="fas fa-images"></i>choose product images or drag and
+              drop</label>
+          </div>
+          <div>
+            <input type="file" name="pr_img" id="file" accept=".png, .img">
+            <label for="file" class="file_d"> <i class="fas fa-images"></i>choose product images or drag and
+              drop</label>
+          </div>
+          <div>
+            <input type="file" name="pr_img" id="file" accept=".png, .img">
+            <label for="file" class="file_d"> <i class="fas fa-images"></i>choose product images or drag and
+              drop</label>
           </div>
         </div>
 
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem officiis accusantium asperiores quisquam
+          necessitatibus nam perspiciatis officia, inventore impedit aliquid saepe dolore eligendi consectetur ut,
+          corrupti quo voluptatum tenetur quaerat iste recusandae neque, perferendis modi!</p>
+
+        <div class="cc_container">
+          <div class="add_size">
+            <label for="pr_size">Choose size</label>
+            <select name="" id="">
+              <option value="1">1</option>
+              <option value="1">1</option>
+              <option value="1">1</option>
+              <option value="1">1</option>
+              <option value="1">1</option>
+              <option value="1">1</option>
+              <option value="1">1</option>
+            </select>
+          </div>
+
+          <div class="pr_price">
+            <label for="pr_price">Product price</label>
+            <input type="number" placeholder="$">
+          </div>
+          <div class="pr_stock">
+            <label for="pr_stock">Product stock</label>
+            <input type="number" placeholder="stock">
+          </div>
+          <div class="pr_launch__date">
+            <label for="pr_launch__date">Product Date</label>
+            <input type="date" placeholder="launch date">
+          </div>
+          <div class="pr_discound">
+            <label for="pr_discound">Product discount</label>
+            <input type="number" placeholder="discount(%)">
+          </div>
+        </div>
+
+        <div class="add_product_btn">
+          <button>add product</button>
+          <button>save product</button>
+          <button>schedule</button>
+        </div>
       </div>
+
     </div>
 
 
 
-  <script src="main.js"></script>
+    <script src="main.js"></script>
 </body>
 
 </html>

@@ -22,6 +22,11 @@ body {
   --btn_color: #1289A7;
 }
 
+input,
+select {
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
 .overflow {
   position: static;
   top: 0;
@@ -69,6 +74,7 @@ body {
   overflow-y: auto;
   background: white;
   position: relative;
+  user-select: none;
 }
 
 .right_container::-webkit-scrollbar {
@@ -77,12 +83,85 @@ body {
   display: none;
 }
 
+
+/*---------------- products card here ---------------------- */
+
+.product_cards {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem 0.5rem;
+}
+.pr_card {
+  width: 250px;
+  padding: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+  border-radius: 5px;
+}
+
+.pr_card:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.pr_card img {
+  width: 220px;
+  height: 180px;
+}
+.pr_card__title {
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+.pr_card__price {
+  font-size: 1.5rem;
+  color: #1289A7;
+  font-weight: bold;
+}
+
+.pr_card__category {
+  font-size: 1.2rem;
+  opacity: 0.8;
+}
+
+.pr_card__link {
+  width: 100%;
+  margin-top: 10px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: all 500ms;
+  background: transparent;
+  color: #1289A7;
+  border: 1px solid #1289A7;
+  border-radius: 4px;
+}
+
+.pr_card__link a {
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.pr_card__link:hover {
+  background: #1289A7;
+  color: white;
+}
+
+
+.pr_card__link:hover a {
+  color: white;
+}
+
+
+/*---------------- products card ends here ---------------------- */
+
+
+
 /* add product btn  */
 
 .add_p_btn {
   position: absolute;
-  top: 2rem;
+  top: 3rem;
   right: 2rem;
+  z-index: 99;
 }
 
 .add_p_btn button {
@@ -91,9 +170,10 @@ body {
   outline: none;
   background: var(--btn_color);
   color: white;
-  font-size: 1rem; 
+  font-size: 1rem;
   border-radius: 4px;
   cursor: pointer;
+  transition: width 500ms;
 }
 
 
@@ -103,19 +183,29 @@ body {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  transform: scale(0);
+  visibility: hidden;
+  transition: all 500ms;
+  border: 1px solid #1B1464;
+  border-radius: 4px;
 }
+.active {
+  transform: scale(1);
+  visibility: visible;
+}
+
 /* prodcut details here  */
 
 .product_details {
   width: 50%;
-  border: 1px solid gray;
   padding: 1rem;
+  border-right: 1px solid #1B1464;
 }
 
 /* product images container  */
-.product_image{
+.product_image {
+  position: relative;
   width: 50%;
-  border: 1px solid seagreen;
   min-height: 500px;
   padding: 1rem;
 }
@@ -128,7 +218,7 @@ body {
   gap: 0px;
 }
 
-.ed_head i{
+.ed_head i {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -140,7 +230,7 @@ body {
   background: gray;
 }
 
-.b2{
+.b2 {
   margin-top: 2rem;
   font-weight: 300;
   font-size: 1rem;
@@ -156,7 +246,7 @@ body {
 
 .pr_name_c label {
   display: block;
-  font-size: 1.5rem;
+  font-size: 1rem;
   margin-top: 20px;
   margin-bottom: 10px;
   font-weight: bold;
@@ -171,7 +261,7 @@ body {
   border: 1px solid var(--text_color);
 }
 
-.pr_name ~ span {
+.pr_name~span {
   display: block;
   margin-top: 5px;
   opacity: 0.5;
@@ -223,9 +313,10 @@ body {
 .pe_desc {
   width: 300px;
 }
+
 .pe_desc label {
   display: block;
-  
+
   margin: 1rem 0;
   font-size: 1rem;
   font-weight: bold;
@@ -246,7 +337,7 @@ body {
 
 /* products images css here  */
 
-.product_image h3:first-child{
+.product_image h3:first-child {
   font-size: 2rem;
   font-weight: bold;
 }
@@ -260,7 +351,12 @@ body {
 
 .pr_img div {
   border: 1px dashed gray;
-  min-height: 100px;
+  min-height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  border-radius: 5px;
 }
 
 .pr_img div:last-child {
@@ -268,4 +364,160 @@ body {
   grid-template-columns: 1fr;
   grid-template-rows: 2fr;
   gap: 5px;
+}
+
+/* files upload css here  */
+
+
+#file {
+  display: none;
+}
+
+.file_d {
+  font-size: 1rem;
+  text-align: center;
+  opacity: 0.5;
+}
+
+.file_d i {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 1rem;
+  color: #006266;
+}
+
+.product_image p {
+  font-size: 0.8rem;
+  opacity: 0.6;
+  margin-top: 2rem;
+}
+
+/* cc container goes here  */
+
+.cc_container {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  margin-top: 3rem;
+  flex-wrap: wrap;
+}
+
+/* product price here  */
+
+.pr_price label {
+  font-size: 1rem;
+  font-weight: bold;
+  display: block;
+}
+
+.pr_price input {
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  margin-top: 10px;
+  width: 200px;
+}
+
+.pr_stock label {
+  font-size: 1rem;
+  font-weight: bold;
+  display: block;
+}
+
+.pr_stock input {
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  margin-top: 10px;
+  width: 200px;
+}
+
+.pr_launch__date label {
+  font-size: 1rem;
+  font-weight: bold;
+  display: block;
+}
+
+.pr_launch__date input {
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  margin-top: 10px;
+  width: 200px;
+}
+
+.pr_launch__date label {
+  font-size: 1rem;
+  font-weight: bold;
+  display: block;
+}
+
+.pr_launch__date input {
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  margin-top: 10px;
+  width: 200px;
+}
+
+.pr_discound label {
+  font-size: 1rem;
+  font-weight: bold;
+  display: block;
+}
+
+.pr_discound input {
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  margin-top: 10px;
+  width: 200px;
+  width: 200px;
+}
+
+
+
+
+/* product size goes here  */
+
+.add_size label {
+  display: block;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.add_size select {
+  width: 200px;
+  padding: 0.6rem 2rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+/* add product button here  */
+.add_product_btn {
+  display: flex;
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.add_product_btn button {
+  width: 200px;
+  border: 1px solid #1B1464;
+  font-size: 1.3rem;
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 1rem;
+  background: transparent;
+}
+
+.add_product_btn button:first-child {
+  background: #1B1464;
+  color: white;
+}
+
+.add_product_btn button:nth-child(2) {
+  background: whitesmoke;
+}
+
+.add_product_btn button:nth-child(3) {
+  opacity: 0.5;
 }

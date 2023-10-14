@@ -1,19 +1,20 @@
 
+const addProduct = document.querySelector(".add_p_btn button");
+const productContainer = document.querySelector(".new_p_container");
+const productCards = document.querySelector(".product_cards");
 
-const notiBell = document.querySelector("#noti_bell");
-const notiBox = document.querySelector(".notificaton_box");
-const overflow = document.querySelector(".overflow");
-
-notiBell.addEventListener("click", () => {
-    notiBox.classList.toggle("active");
-    overflow.style.display = "block";
-})
-
-overflow.addEventListener("click", () => {
-  if (notiBox.classList.contains("active")) {
-    notiBox.classList.remove("active");
+function addProductDiv() {
+  if (productContainer.classList.contains("active")) {
+    productContainer.classList.remove("active");
+    productCards.style.display = "";
+    addProduct.innerHTML = `<i class="fas fa-plus"></i> add new product`;
   }
-  if (!notiBox.classList.contains("active")) {
-    overflow.style.display = "none";
+  else {
+    productContainer.classList.add("active");
+    productCards.style.display = "none";
+    addProduct.innerHTML = `<i class="fas fa-ban"></i> cancel`;
   }
-})
+  
+}
+
+addProduct.addEventListener("click", addProductDiv);
